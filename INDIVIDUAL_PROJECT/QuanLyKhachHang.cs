@@ -13,9 +13,11 @@ namespace INDIVIDUAL_PROJECT
 {
     public partial class QuanLyKhachHang : Form
     {
+        LopDungChung dungchung;
         public QuanLyKhachHang()
         {
             InitializeComponent();
+            dungchung = new LopDungChung();
         }
 
         private void QuanLyKhachHang_Load(object sender, EventArgs e)
@@ -24,16 +26,12 @@ namespace INDIVIDUAL_PROJECT
         }
         public void Load_DSKhachHang()
         {
-            String chuoiketnoi = @"";
-            SqlConnection connect = new SqlConnection(chuoiketnoi);
-            connect.Open();
+            
+            
             string sqlLoad_DSKH = "select * form KHACHHANG";
-            SqlCommand comm= new SqlCommand(sqlLoad_DSKH,connect);
-            SqlDataAdapter adapter = new SqlDataAdapter(comm);
-            DataTable tb=new DataTable();
-            adapter.Fill(tb);
-            data_DanhSachKH.DataSource = tb;
-            connect.Close();
+          
+            data_DanhSachKH.DataSource = dungchung.LoadGrid(sqlLoad_DSKH);
+            
 
         }
     }

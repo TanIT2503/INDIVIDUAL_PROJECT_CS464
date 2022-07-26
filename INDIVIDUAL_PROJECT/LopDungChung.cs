@@ -41,6 +41,7 @@ namespace INDIVIDUAL_PROJECT
 
         public DataTable LoadGrid(string sql)
         {
+            conn.Open();
             SqlDataAdapter da = new SqlDataAdapter(sql, conn);
             DataTable dt = new DataTable();
             da.Fill(dt);
