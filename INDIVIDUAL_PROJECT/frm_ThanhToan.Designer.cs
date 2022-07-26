@@ -30,6 +30,7 @@
         {
             this.lbl_ThanhToan = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.cb_MaNV = new System.Windows.Forms.ComboBox();
             this.txt_MaTT = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -39,14 +40,12 @@
             this.btn_Xoa = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.btn_Them = new System.Windows.Forms.Button();
-            this.txt_TongLuong = new System.Windows.Forms.TextBox();
-            this.txt_TenNV = new System.Windows.Forms.TextBox();
+            this.txt_Tim = new System.Windows.Forms.TextBox();
             this.txt_ThuongThem = new System.Windows.Forms.TextBox();
             this.txt_GioLV = new System.Windows.Forms.TextBox();
-            this.lbl_TongLuong = new System.Windows.Forms.Label();
+            this.lbl_Tim = new System.Windows.Forms.Label();
             this.lbl_ThuongThem = new System.Windows.Forms.Label();
             this.lbl_GioLV = new System.Windows.Forms.Label();
-            this.lbl_TenNV = new System.Windows.Forms.Label();
             this.lbl_MaNV = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -67,6 +66,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.cb_MaNV);
             this.groupBox1.Controls.Add(this.txt_MaTT);
             this.groupBox1.Controls.Add(this.label1);
@@ -76,14 +76,12 @@
             this.groupBox1.Controls.Add(this.btn_Xoa);
             this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Controls.Add(this.btn_Them);
-            this.groupBox1.Controls.Add(this.txt_TongLuong);
-            this.groupBox1.Controls.Add(this.txt_TenNV);
+            this.groupBox1.Controls.Add(this.txt_Tim);
             this.groupBox1.Controls.Add(this.txt_ThuongThem);
             this.groupBox1.Controls.Add(this.txt_GioLV);
-            this.groupBox1.Controls.Add(this.lbl_TongLuong);
+            this.groupBox1.Controls.Add(this.lbl_Tim);
             this.groupBox1.Controls.Add(this.lbl_ThuongThem);
             this.groupBox1.Controls.Add(this.lbl_GioLV);
-            this.groupBox1.Controls.Add(this.lbl_TenNV);
             this.groupBox1.Controls.Add(this.lbl_MaNV);
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI Variable Small", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(54, 85);
@@ -93,14 +91,24 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Nhập thông tin";
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Segoe UI Variable Small", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(1005, 25);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 35);
+            this.button1.TabIndex = 19;
+            this.button1.Text = "Tìm";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // cb_MaNV
             // 
             this.cb_MaNV.FormattingEnabled = true;
             this.cb_MaNV.Location = new System.Drawing.Point(475, 33);
             this.cb_MaNV.Name = "cb_MaNV";
-            this.cb_MaNV.Size = new System.Drawing.Size(204, 25);
+            this.cb_MaNV.Size = new System.Drawing.Size(211, 25);
             this.cb_MaNV.TabIndex = 18;
-            this.cb_MaNV.Text = "Chọn mã nhân viên";
             // 
             // txt_MaTT
             // 
@@ -128,6 +136,7 @@
             this.btn_Thoat.TabIndex = 15;
             this.btn_Thoat.Text = "Thoát";
             this.btn_Thoat.UseVisualStyleBackColor = true;
+            this.btn_Thoat.Click += new System.EventHandler(this.btn_Thoat_Click);
             // 
             // btn_Reset
             // 
@@ -138,6 +147,7 @@
             this.btn_Reset.TabIndex = 14;
             this.btn_Reset.Text = "Nhập lại";
             this.btn_Reset.UseVisualStyleBackColor = true;
+            this.btn_Reset.Click += new System.EventHandler(this.btn_Reset_Click);
             // 
             // btn_Sua
             // 
@@ -148,6 +158,7 @@
             this.btn_Sua.TabIndex = 13;
             this.btn_Sua.Text = "Sửa";
             this.btn_Sua.UseVisualStyleBackColor = true;
+            this.btn_Sua.Click += new System.EventHandler(this.btn_Sua_Click);
             // 
             // btn_Xoa
             // 
@@ -158,6 +169,7 @@
             this.btn_Xoa.TabIndex = 12;
             this.btn_Xoa.Text = "Xóa";
             this.btn_Xoa.UseVisualStyleBackColor = true;
+            this.btn_Xoa.Click += new System.EventHandler(this.btn_Xoa_Click);
             // 
             // button2
             // 
@@ -179,19 +191,12 @@
             this.btn_Them.UseVisualStyleBackColor = true;
             this.btn_Them.Click += new System.EventHandler(this.btn_Them_Click);
             // 
-            // txt_TongLuong
+            // txt_Tim
             // 
-            this.txt_TongLuong.Location = new System.Drawing.Point(862, 110);
-            this.txt_TongLuong.Name = "txt_TongLuong";
-            this.txt_TongLuong.Size = new System.Drawing.Size(211, 25);
-            this.txt_TongLuong.TabIndex = 9;
-            // 
-            // txt_TenNV
-            // 
-            this.txt_TenNV.Location = new System.Drawing.Point(862, 33);
-            this.txt_TenNV.Name = "txt_TenNV";
-            this.txt_TenNV.Size = new System.Drawing.Size(211, 25);
-            this.txt_TenNV.TabIndex = 8;
+            this.txt_Tim.Location = new System.Drawing.Point(819, 31);
+            this.txt_Tim.Name = "txt_Tim";
+            this.txt_Tim.Size = new System.Drawing.Size(180, 25);
+            this.txt_Tim.TabIndex = 9;
             // 
             // txt_ThuongThem
             // 
@@ -207,15 +212,15 @@
             this.txt_GioLV.Size = new System.Drawing.Size(133, 25);
             this.txt_GioLV.TabIndex = 5;
             // 
-            // lbl_TongLuong
+            // lbl_Tim
             // 
-            this.lbl_TongLuong.AutoSize = true;
-            this.lbl_TongLuong.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_TongLuong.Location = new System.Drawing.Point(714, 105);
-            this.lbl_TongLuong.Name = "lbl_TongLuong";
-            this.lbl_TongLuong.Size = new System.Drawing.Size(120, 27);
-            this.lbl_TongLuong.TabIndex = 4;
-            this.lbl_TongLuong.Text = "Tổng lương:";
+            this.lbl_Tim.AutoSize = true;
+            this.lbl_Tim.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Tim.Location = new System.Drawing.Point(710, 31);
+            this.lbl_Tim.Name = "lbl_Tim";
+            this.lbl_Tim.Size = new System.Drawing.Size(101, 27);
+            this.lbl_Tim.TabIndex = 4;
+            this.lbl_Tim.Text = "Tìm kiếm:";
             // 
             // lbl_ThuongThem
             // 
@@ -236,16 +241,6 @@
             this.lbl_GioLV.Size = new System.Drawing.Size(128, 27);
             this.lbl_GioLV.TabIndex = 2;
             this.lbl_GioLV.Text = "Giờ làm việc:";
-            // 
-            // lbl_TenNV
-            // 
-            this.lbl_TenNV.AutoSize = true;
-            this.lbl_TenNV.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_TenNV.Location = new System.Drawing.Point(714, 33);
-            this.lbl_TenNV.Name = "lbl_TenNV";
-            this.lbl_TenNV.Size = new System.Drawing.Size(143, 27);
-            this.lbl_TenNV.TabIndex = 1;
-            this.lbl_TenNV.Text = "Tên nhân viên: ";
             // 
             // lbl_MaNV
             // 
@@ -277,6 +272,7 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(1081, 185);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // frm_ThanhToan
             // 
@@ -287,7 +283,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.lbl_ThanhToan);
             this.Name = "frm_ThanhToan";
-            this.Text = "s";
+            this.Text = "Thanh Toán Lương Nhân Viên";
             this.Load += new System.EventHandler(this.frm_ThanhToan_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -303,14 +299,10 @@
         private System.Windows.Forms.Label lbl_ThanhToan;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label lbl_MaNV;
-        private System.Windows.Forms.TextBox txt_TongLuong;
-        private System.Windows.Forms.TextBox txt_TenNV;
         private System.Windows.Forms.TextBox txt_ThuongThem;
         private System.Windows.Forms.TextBox txt_GioLV;
-        private System.Windows.Forms.Label lbl_TongLuong;
         private System.Windows.Forms.Label lbl_ThuongThem;
         private System.Windows.Forms.Label lbl_GioLV;
-        private System.Windows.Forms.Label lbl_TenNV;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TextBox txt_MaTT;
         private System.Windows.Forms.Label label1;
@@ -322,5 +314,8 @@
         private System.Windows.Forms.Button btn_Them;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.ComboBox cb_MaNV;
+        private System.Windows.Forms.TextBox txt_Tim;
+        private System.Windows.Forms.Label lbl_Tim;
+        private System.Windows.Forms.Button button1;
     }
 }
