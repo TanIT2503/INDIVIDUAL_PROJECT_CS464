@@ -12,6 +12,7 @@ namespace INDIVIDUAL_PROJECT
     internal class LopDungChung
     {
         String chuoiKetNoi = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|App_Data\BanHang.mdf;Integrated Security=True";
+
         SqlConnection conn;
         
         public LopDungChung()
