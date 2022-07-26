@@ -16,7 +16,7 @@ namespace INDIVIDUAL_PROJECT
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frm_ThanhToan());
+            Application.Run(new frm_DangNhap());
         }
     }
 }
