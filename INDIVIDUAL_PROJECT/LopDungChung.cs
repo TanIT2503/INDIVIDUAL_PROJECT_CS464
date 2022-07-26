@@ -46,5 +46,13 @@ namespace INDIVIDUAL_PROJECT
             da.Fill(dt);
             return dt;
         }
+
+        public DataTable LoadCombobox(string sql)
+        {
+            SqlDataAdapter da = new SqlDataAdapter(sql,conn);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            return dt;
+        }
     }
 }
