@@ -130,7 +130,6 @@ namespace INDIVIDUAL_PROJECT
         {
             if(txt_TimKiem.Text == "")
             {
-                MessageBox.Show("Không có thông tin nhân viên cần tìm", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 LoadData();
             }
             else
