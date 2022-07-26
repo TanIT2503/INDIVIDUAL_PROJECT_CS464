@@ -61,9 +61,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frm_ThanhToan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_ThanhToan.Designer.cs">
+      <DependentUpon>frm_ThanhToan.cs</DependentUpon>
+    </Compile>
     <Compile Include="LopDungChung.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frm_ThanhToan.resx">
+      <DependentUpon>frm_ThanhToan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
