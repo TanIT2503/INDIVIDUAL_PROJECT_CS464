@@ -30,6 +30,7 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txt_HinhAnh = new System.Windows.Forms.TextBox();
             this.btn_Thoat = new System.Windows.Forms.Button();
             this.btn_Xoa = new System.Windows.Forms.Button();
             this.btn_Sua = new System.Windows.Forms.Button();
@@ -51,7 +52,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.txt_HinhAnh = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pct_HinhAnh)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -98,6 +98,13 @@
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin cá nhân";
+            // 
+            // txt_HinhAnh
+            // 
+            this.txt_HinhAnh.Location = new System.Drawing.Point(984, 165);
+            this.txt_HinhAnh.Name = "txt_HinhAnh";
+            this.txt_HinhAnh.Size = new System.Drawing.Size(130, 34);
+            this.txt_HinhAnh.TabIndex = 23;
             // 
             // btn_Thoat
             // 
@@ -181,8 +188,10 @@
             this.pct_HinhAnh.Location = new System.Drawing.Point(984, 29);
             this.pct_HinhAnh.Name = "pct_HinhAnh";
             this.pct_HinhAnh.Size = new System.Drawing.Size(130, 130);
+            this.pct_HinhAnh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pct_HinhAnh.TabIndex = 10;
             this.pct_HinhAnh.TabStop = false;
+            this.pct_HinhAnh.Click += new System.EventHandler(this.pct_HinhAnh_Click);
             // 
             // txt_HoTen
             // 
@@ -282,13 +291,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(1127, 164);
             this.dataGridView1.TabIndex = 0;
             // 
-            // txt_HinhAnh
-            // 
-            this.txt_HinhAnh.Location = new System.Drawing.Point(984, 165);
-            this.txt_HinhAnh.Name = "txt_HinhAnh";
-            this.txt_HinhAnh.Size = new System.Drawing.Size(130, 34);
-            this.txt_HinhAnh.TabIndex = 23;
-            // 
             // frm_QuanLyNhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -299,6 +301,7 @@
             this.Controls.Add(this.label1);
             this.Name = "frm_QuanLyNhanVien";
             this.Text = "frm_QuanLyNhanVien";
+            this.Load += new System.EventHandler(this.frm_QuanLyNhanVien_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pct_HinhAnh)).EndInit();
