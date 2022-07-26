@@ -9,7 +9,6 @@ using System.Windows.Forms;
 
 namespace INDIVIDUAL_PROJECT
 {
-
     internal class LopDungChung
     {
         String chuoiKetNoi = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|App_Data\BanHang.mdf;Integrated Security=True";
@@ -48,6 +47,12 @@ namespace INDIVIDUAL_PROJECT
             return dt;
         }
 
-        
+        public DataTable LoadCombobox(string sql)
+        {
+            SqlDataAdapter da = new SqlDataAdapter(sql,conn);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            return dt;
+        }
     }
 }
