@@ -59,10 +59,11 @@ namespace INDIVIDUAL_PROJECT
 
         private void btn_Sua_Click(object sender, EventArgs e)
         {
-            LoadData();
+            
             string sqlSua = "Update NHANVIEN set HOTEN = N'" + txt_HoTen.Text + "', GIOITINH = N'" + cbx_GioiTinh.Text + "', NGAYSINH = Convert(DateTime,'" + dt_NgaySinh.Text + "',103), SDT = '" + txt_SoDT.Text + "', DIACHI = N'" + txt_DiaChi.Text + "', LUONG = '" + txt_Luong.Text + "', HINHANH = '" + txt_HinhAnh.Text + "' where MANV = '" + txt_MaNhanVien.Text + "'";
             pct_HinhAnh.Image.Save(duongdan + txt_HinhAnh.Text);
             lopDungChung.NonQuery(sqlSua);
+            LoadData();
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -123,6 +124,20 @@ namespace INDIVIDUAL_PROJECT
         {
             frm_DangNhap frm = new frm_DangNhap();
             frm.Visible = true;
+        }
+
+        private void btn_Tim_Click(object sender, EventArgs e)
+        {
+            if(txt_TimKiem.Text == "")
+            {
+                MessageBox.Show("Không có thông tin nhân viên cần tìm", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                LoadData();
+            }
+            else
+            {
+                string sqlTimKiem = "select * from NHANVIEN where (MANV like '%" + txt_TimKiem.Text + "%') or (HOTEN like '%" + txt_TimKiem.Text + "%') or (GIOITINH like '%" + txt_TimKiem.Text + "%' )";
+                dataGridView1.DataSource = lopDungChung.LoadGrid(sqlTimKiem);
+            }
         }
     }
 }
