@@ -21,7 +21,28 @@ namespace INDIVIDUAL_PROJECT
 
         private void btn_Them_Click(object sender, EventArgs e)
         {
-            string sqlThem = "insert into THANHTOAN values('"+txt_MaTT.Text+"','"+txt_MaNV.Text;
+            string sqlThem = "insert into THANHTOAN values('"+txt_MaTT.Text+"','"+cb_MaNV.SelectedValue+"','"+txt_GioLV.Text+"','"+txt_ThuongThem.Text+"')";
+            lopChung.NonQuery(sqlThem);
+            LoadGrid();
         }
+
+        public void LoadGrid()
+        {
+            string sqlLoad = "select t.MATT,t.MANV,nv.HOTEN,t.GIOLAMVIEC,t.THUONGTHEM from THANHTOAN as t join NHANVIEN as nv on t.MANV = nv.MANV";
+            dataGridView1.DataSource = lopChung.LoadGrid(sqlLoad);
+        }
+
+        public void LoadComboboxMaNV()
+        {
+            string sql = "Select * from NHANVIEN";
+            cb_MaNV.DataSource = lopChung.LoadCombobox(sql);
+            cb_MaNV.DisplayMember = "MANV";
+        }
+        private void frm_ThanhToan_Load(object sender, EventArgs e)
+        {
+            LoadGrid();
+        }
+
+        
     }
 }

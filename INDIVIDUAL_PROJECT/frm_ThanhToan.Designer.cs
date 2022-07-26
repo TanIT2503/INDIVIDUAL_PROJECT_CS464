@@ -30,6 +30,7 @@
         {
             this.lbl_ThanhToan = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cb_MaNV = new System.Windows.Forms.ComboBox();
             this.txt_MaTT = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btn_Thoat = new System.Windows.Forms.Button();
@@ -41,7 +42,6 @@
             this.txt_TongLuong = new System.Windows.Forms.TextBox();
             this.txt_TenNV = new System.Windows.Forms.TextBox();
             this.txt_ThuongThem = new System.Windows.Forms.TextBox();
-            this.txt_MaNV = new System.Windows.Forms.TextBox();
             this.txt_GioLV = new System.Windows.Forms.TextBox();
             this.lbl_TongLuong = new System.Windows.Forms.Label();
             this.lbl_ThuongThem = new System.Windows.Forms.Label();
@@ -67,6 +67,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.cb_MaNV);
             this.groupBox1.Controls.Add(this.txt_MaTT);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.btn_Thoat);
@@ -78,7 +79,6 @@
             this.groupBox1.Controls.Add(this.txt_TongLuong);
             this.groupBox1.Controls.Add(this.txt_TenNV);
             this.groupBox1.Controls.Add(this.txt_ThuongThem);
-            this.groupBox1.Controls.Add(this.txt_MaNV);
             this.groupBox1.Controls.Add(this.txt_GioLV);
             this.groupBox1.Controls.Add(this.lbl_TongLuong);
             this.groupBox1.Controls.Add(this.lbl_ThuongThem);
@@ -92,6 +92,15 @@
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Nhập thông tin";
+            // 
+            // cb_MaNV
+            // 
+            this.cb_MaNV.FormattingEnabled = true;
+            this.cb_MaNV.Location = new System.Drawing.Point(475, 33);
+            this.cb_MaNV.Name = "cb_MaNV";
+            this.cb_MaNV.Size = new System.Drawing.Size(204, 25);
+            this.cb_MaNV.TabIndex = 18;
+            this.cb_MaNV.Text = "Chọn mã nhân viên";
             // 
             // txt_MaTT
             // 
@@ -191,13 +200,6 @@
             this.txt_ThuongThem.Size = new System.Drawing.Size(211, 25);
             this.txt_ThuongThem.TabIndex = 7;
             // 
-            // txt_MaNV
-            // 
-            this.txt_MaNV.Location = new System.Drawing.Point(475, 33);
-            this.txt_MaNV.Name = "txt_MaNV";
-            this.txt_MaNV.Size = new System.Drawing.Size(211, 25);
-            this.txt_MaNV.TabIndex = 6;
-            // 
             // txt_GioLV
             // 
             this.txt_GioLV.Location = new System.Drawing.Point(164, 104);
@@ -285,7 +287,8 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.lbl_ThanhToan);
             this.Name = "frm_ThanhToan";
-            this.Text = "Thanh Toán Lương Nhân Viên";
+            this.Text = "s";
+            this.Load += new System.EventHandler(this.frm_ThanhToan_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -303,7 +306,6 @@
         private System.Windows.Forms.TextBox txt_TongLuong;
         private System.Windows.Forms.TextBox txt_TenNV;
         private System.Windows.Forms.TextBox txt_ThuongThem;
-        private System.Windows.Forms.TextBox txt_MaNV;
         private System.Windows.Forms.TextBox txt_GioLV;
         private System.Windows.Forms.Label lbl_TongLuong;
         private System.Windows.Forms.Label lbl_ThuongThem;
@@ -319,5 +321,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button btn_Them;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.ComboBox cb_MaNV;
     }
 }
