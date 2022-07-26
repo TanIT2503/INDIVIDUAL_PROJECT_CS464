@@ -16,8 +16,7 @@ namespace INDIVIDUAL_PROJECT
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new QuanLyKhachHang());
-            Application.Run(new NhapHangHoa());
+            Application.Run(new frm_DangNhap());
         }
     }
 }
