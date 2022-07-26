@@ -35,7 +35,6 @@
             this.btn_Xoa = new System.Windows.Forms.Button();
             this.btn_Them = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.txt_TimKiem = new System.Windows.Forms.TextBox();
             this.cb_Search = new System.Windows.Forms.ComboBox();
             this.dt_NgaySinh = new System.Windows.Forms.DateTimePicker();
             this.cb_LoaiKH = new System.Windows.Forms.ComboBox();
@@ -76,7 +75,6 @@
             this.groupBox1.Controls.Add(this.btn_Xoa);
             this.groupBox1.Controls.Add(this.btn_Them);
             this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Controls.Add(this.txt_TimKiem);
             this.groupBox1.Controls.Add(this.cb_Search);
             this.groupBox1.Controls.Add(this.dt_NgaySinh);
             this.groupBox1.Controls.Add(this.cb_LoaiKH);
@@ -105,57 +103,54 @@
             this.btn_Clear.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btn_Clear.Location = new System.Drawing.Point(898, 269);
             this.btn_Clear.Name = "btn_Clear";
-            this.btn_Clear.Size = new System.Drawing.Size(88, 23);
+            this.btn_Clear.Size = new System.Drawing.Size(92, 31);
             this.btn_Clear.TabIndex = 21;
             this.btn_Clear.Text = "CLEAR";
             this.btn_Clear.UseVisualStyleBackColor = true;
+            this.btn_Clear.Click += new System.EventHandler(this.btn_Clear_Click);
             // 
             // btn_Sua
             // 
             this.btn_Sua.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btn_Sua.Location = new System.Drawing.Point(778, 269);
             this.btn_Sua.Name = "btn_Sua";
-            this.btn_Sua.Size = new System.Drawing.Size(75, 23);
+            this.btn_Sua.Size = new System.Drawing.Size(82, 31);
             this.btn_Sua.TabIndex = 20;
             this.btn_Sua.Text = "SỬA";
             this.btn_Sua.UseVisualStyleBackColor = true;
+            this.btn_Sua.Click += new System.EventHandler(this.btn_Sua_Click);
             // 
             // btn_Xoa
             // 
             this.btn_Xoa.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btn_Xoa.Location = new System.Drawing.Point(650, 269);
             this.btn_Xoa.Name = "btn_Xoa";
-            this.btn_Xoa.Size = new System.Drawing.Size(75, 23);
+            this.btn_Xoa.Size = new System.Drawing.Size(87, 31);
             this.btn_Xoa.TabIndex = 19;
             this.btn_Xoa.Text = "XOÁ";
             this.btn_Xoa.UseVisualStyleBackColor = true;
+            this.btn_Xoa.Click += new System.EventHandler(this.btn_Xoa_Click);
             // 
             // btn_Them
             // 
             this.btn_Them.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btn_Them.Location = new System.Drawing.Point(536, 269);
+            this.btn_Them.Location = new System.Drawing.Point(523, 269);
             this.btn_Them.Name = "btn_Them";
-            this.btn_Them.Size = new System.Drawing.Size(101, 23);
+            this.btn_Them.Size = new System.Drawing.Size(114, 31);
             this.btn_Them.TabIndex = 18;
             this.btn_Them.Text = "THÊM KH";
             this.btn_Them.UseVisualStyleBackColor = true;
+            this.btn_Them.Click += new System.EventHandler(this.btn_Them_Click);
             // 
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.button1.Location = new System.Drawing.Point(898, 198);
+            this.button1.Location = new System.Drawing.Point(784, 199);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(101, 24);
+            this.button1.Size = new System.Drawing.Size(101, 36);
             this.button1.TabIndex = 17;
             this.button1.Text = "TÌM KIẾM";
             this.button1.UseVisualStyleBackColor = true;
-            // 
-            // txt_TimKiem
-            // 
-            this.txt_TimKiem.Location = new System.Drawing.Point(778, 198);
-            this.txt_TimKiem.Name = "txt_TimKiem";
-            this.txt_TimKiem.Size = new System.Drawing.Size(100, 22);
-            this.txt_TimKiem.TabIndex = 16;
             // 
             // cb_Search
             // 
@@ -167,6 +162,8 @@
             // 
             // dt_NgaySinh
             // 
+            this.dt_NgaySinh.CustomFormat = "dd/MM/yyyy";
+            this.dt_NgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dt_NgaySinh.Location = new System.Drawing.Point(685, 47);
             this.dt_NgaySinh.Name = "dt_NgaySinh";
             this.dt_NgaySinh.Size = new System.Drawing.Size(200, 22);
@@ -183,6 +180,10 @@
             // cb_GioiTinh
             // 
             this.cb_GioiTinh.FormattingEnabled = true;
+            this.cb_GioiTinh.Items.AddRange(new object[] {
+            "Nam",
+            "Nữ",
+            "Khác"});
             this.cb_GioiTinh.Location = new System.Drawing.Point(224, 146);
             this.cb_GioiTinh.Name = "cb_GioiTinh";
             this.cb_GioiTinh.Size = new System.Drawing.Size(121, 24);
@@ -301,7 +302,7 @@
             this.groupBox2.Controls.Add(this.data_DanhSachKH);
             this.groupBox2.Location = new System.Drawing.Point(12, 329);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(818, 130);
+            this.groupBox2.Size = new System.Drawing.Size(1031, 208);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Danh sách khách hàng ";
@@ -309,11 +310,11 @@
             // data_DanhSachKH
             // 
             this.data_DanhSachKH.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.data_DanhSachKH.Location = new System.Drawing.Point(0, 14);
+            this.data_DanhSachKH.Location = new System.Drawing.Point(6, 21);
             this.data_DanhSachKH.Name = "data_DanhSachKH";
             this.data_DanhSachKH.RowHeadersWidth = 51;
             this.data_DanhSachKH.RowTemplate.Height = 24;
-            this.data_DanhSachKH.Size = new System.Drawing.Size(1037, 180);
+            this.data_DanhSachKH.Size = new System.Drawing.Size(1019, 173);
             this.data_DanhSachKH.TabIndex = 0;
             // 
             // QuanLyKhachHang
@@ -345,7 +346,6 @@
         private System.Windows.Forms.Button btn_Xoa;
         private System.Windows.Forms.Button btn_Them;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox txt_TimKiem;
         private System.Windows.Forms.ComboBox cb_Search;
         private System.Windows.Forms.DateTimePicker dt_NgaySinh;
         private System.Windows.Forms.ComboBox cb_LoaiKH;

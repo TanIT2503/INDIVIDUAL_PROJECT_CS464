@@ -11,3 +11,4 @@ D:\project_laptrinhnet\INDIVIDUAL_PROJECT_CS464\INDIVIDUAL_PROJECT\obj\Debug\IND
 D:\project_laptrinhnet\INDIVIDUAL_PROJECT_CS464\INDIVIDUAL_PROJECT\bin\Debug\App_Data\BanHang.mdf
 D:\project_laptrinhnet\INDIVIDUAL_PROJECT_CS464\INDIVIDUAL_PROJECT\bin\Debug\App_Data\BanHang_log.ldf
 D:\project_laptrinhnet\INDIVIDUAL_PROJECT_CS464\INDIVIDUAL_PROJECT\obj\Debug\INDIVIDUAL_PROJECT.QuanLyKhachHang.resources
+D:\project_laptrinhnet\INDIVIDUAL_PROJECT_CS464\INDIVIDUAL_PROJECT\obj\Debug\INDIVIDUAL_PROJECT.NhapHangHoa.resources
