@@ -51,6 +51,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.txt_HinhAnh = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pct_HinhAnh)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -70,6 +71,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.txt_HinhAnh);
             this.groupBox1.Controls.Add(this.btn_Thoat);
             this.groupBox1.Controls.Add(this.btn_Xoa);
             this.groupBox1.Controls.Add(this.btn_Sua);
@@ -90,16 +92,16 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(37, 76);
+            this.groupBox1.Location = new System.Drawing.Point(37, 68);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1140, 253);
+            this.groupBox1.Size = new System.Drawing.Size(1140, 286);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin cá nhân";
             // 
             // btn_Thoat
             // 
-            this.btn_Thoat.Location = new System.Drawing.Point(956, 201);
+            this.btn_Thoat.Location = new System.Drawing.Point(955, 225);
             this.btn_Thoat.Name = "btn_Thoat";
             this.btn_Thoat.Size = new System.Drawing.Size(108, 34);
             this.btn_Thoat.TabIndex = 22;
@@ -108,7 +110,7 @@
             // 
             // btn_Xoa
             // 
-            this.btn_Xoa.Location = new System.Drawing.Point(812, 201);
+            this.btn_Xoa.Location = new System.Drawing.Point(811, 225);
             this.btn_Xoa.Name = "btn_Xoa";
             this.btn_Xoa.Size = new System.Drawing.Size(108, 34);
             this.btn_Xoa.TabIndex = 21;
@@ -117,7 +119,7 @@
             // 
             // btn_Sua
             // 
-            this.btn_Sua.Location = new System.Drawing.Point(675, 201);
+            this.btn_Sua.Location = new System.Drawing.Point(674, 225);
             this.btn_Sua.Name = "btn_Sua";
             this.btn_Sua.Size = new System.Drawing.Size(108, 34);
             this.btn_Sua.TabIndex = 20;
@@ -126,7 +128,7 @@
             // 
             // btn_Them
             // 
-            this.btn_Them.Location = new System.Drawing.Point(528, 201);
+            this.btn_Them.Location = new System.Drawing.Point(527, 225);
             this.btn_Them.Name = "btn_Them";
             this.btn_Them.Size = new System.Drawing.Size(108, 34);
             this.btn_Them.TabIndex = 19;
@@ -166,6 +168,9 @@
             // cbx_GioiTinh
             // 
             this.cbx_GioiTinh.FormattingEnabled = true;
+            this.cbx_GioiTinh.Items.AddRange(new object[] {
+            "Nam",
+            "Nữ"});
             this.cbx_GioiTinh.Location = new System.Drawing.Point(181, 146);
             this.cbx_GioiTinh.Name = "cbx_GioiTinh";
             this.cbx_GioiTinh.Size = new System.Drawing.Size(255, 35);
@@ -277,6 +282,13 @@
             this.dataGridView1.Size = new System.Drawing.Size(1127, 164);
             this.dataGridView1.TabIndex = 0;
             // 
+            // txt_HinhAnh
+            // 
+            this.txt_HinhAnh.Location = new System.Drawing.Point(984, 165);
+            this.txt_HinhAnh.Name = "txt_HinhAnh";
+            this.txt_HinhAnh.Size = new System.Drawing.Size(130, 34);
+            this.txt_HinhAnh.TabIndex = 23;
+            // 
             // frm_QuanLyNhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -322,5 +334,6 @@
         private System.Windows.Forms.TextBox txt_SoDT;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.TextBox txt_HinhAnh;
     }
 }

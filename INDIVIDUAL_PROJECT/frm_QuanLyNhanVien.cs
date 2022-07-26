@@ -21,6 +21,7 @@ namespace INDIVIDUAL_PROJECT
 
         private void btn_Them_Click(object sender, EventArgs e)
         {
+            string sqlThem = "insert into NHANVIEN Values('" + txt_MaNhanVien.Text + "', '" + txt_HoTen.Text + "', '" + cbx_GioiTinh.Text + "', '" + dt_NgaySinh.Text + "', '" + txt_SoDT.Text + "', '" + txt_DiaChi.Text + "', '" + txt_Luong.Text + "', '"+ txt_HinhAnh.Text +"')";
 
         }
     }
