@@ -35,7 +35,6 @@
             this.label9 = new System.Windows.Forms.Label();
             this.btn_LamMoi = new System.Windows.Forms.Button();
             this.txt_HinhAnh = new System.Windows.Forms.TextBox();
-            this.btn_Thoat = new System.Windows.Forms.Button();
             this.btn_Xoa = new System.Windows.Forms.Button();
             this.btn_Sua = new System.Windows.Forms.Button();
             this.btn_Them = new System.Windows.Forms.Button();
@@ -80,7 +79,6 @@
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.btn_LamMoi);
             this.groupBox1.Controls.Add(this.txt_HinhAnh);
-            this.groupBox1.Controls.Add(this.btn_Thoat);
             this.groupBox1.Controls.Add(this.btn_Xoa);
             this.groupBox1.Controls.Add(this.btn_Sua);
             this.groupBox1.Controls.Add(this.btn_Them);
@@ -135,7 +133,7 @@
             // 
             // btn_LamMoi
             // 
-            this.btn_LamMoi.Location = new System.Drawing.Point(869, 225);
+            this.btn_LamMoi.Location = new System.Drawing.Point(973, 248);
             this.btn_LamMoi.Name = "btn_LamMoi";
             this.btn_LamMoi.Size = new System.Drawing.Size(108, 34);
             this.btn_LamMoi.TabIndex = 24;
@@ -150,19 +148,9 @@
             this.txt_HinhAnh.Size = new System.Drawing.Size(130, 34);
             this.txt_HinhAnh.TabIndex = 23;
             // 
-            // btn_Thoat
-            // 
-            this.btn_Thoat.Location = new System.Drawing.Point(983, 225);
-            this.btn_Thoat.Name = "btn_Thoat";
-            this.btn_Thoat.Size = new System.Drawing.Size(108, 34);
-            this.btn_Thoat.TabIndex = 22;
-            this.btn_Thoat.Text = "Thoát";
-            this.btn_Thoat.UseVisualStyleBackColor = true;
-            this.btn_Thoat.Click += new System.EventHandler(this.btn_Thoat_Click);
-            // 
             // btn_Xoa
             // 
-            this.btn_Xoa.Location = new System.Drawing.Point(755, 225);
+            this.btn_Xoa.Location = new System.Drawing.Point(839, 248);
             this.btn_Xoa.Name = "btn_Xoa";
             this.btn_Xoa.Size = new System.Drawing.Size(108, 34);
             this.btn_Xoa.TabIndex = 21;
@@ -172,7 +160,7 @@
             // 
             // btn_Sua
             // 
-            this.btn_Sua.Location = new System.Drawing.Point(641, 225);
+            this.btn_Sua.Location = new System.Drawing.Point(697, 248);
             this.btn_Sua.Name = "btn_Sua";
             this.btn_Sua.Size = new System.Drawing.Size(108, 34);
             this.btn_Sua.TabIndex = 20;
@@ -182,7 +170,7 @@
             // 
             // btn_Them
             // 
-            this.btn_Them.Location = new System.Drawing.Point(527, 225);
+            this.btn_Them.Location = new System.Drawing.Point(560, 248);
             this.btn_Them.Name = "btn_Them";
             this.btn_Them.Size = new System.Drawing.Size(108, 34);
             this.btn_Them.TabIndex = 19;
@@ -378,7 +366,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button btn_Thoat;
         private System.Windows.Forms.Button btn_Xoa;
         private System.Windows.Forms.Button btn_Sua;
         private System.Windows.Forms.Button btn_Them;

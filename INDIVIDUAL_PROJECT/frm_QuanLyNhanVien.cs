@@ -95,17 +95,6 @@ namespace INDIVIDUAL_PROJECT
             
         }
 
-        private void btn_Thoat_Click(object sender, EventArgs e)
-        {
-            frm_DangNhap frm = new frm_DangNhap();
-            DialogResult dialogResult;
-            dialogResult = MessageBox.Show("Bạn có muốn thoát chương trình.", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (dialogResult == DialogResult.Yes)
-            {
-                this.Close();
-                frm.Visible = true;
-            }
-        }
 
         private void btn_LamMoi_Click(object sender, EventArgs e)
         {
@@ -122,7 +111,7 @@ namespace INDIVIDUAL_PROJECT
 
         private void frm_QuanLyNhanVien_FormClosing(object sender, FormClosingEventArgs e)
         {
-            frm_DangNhap frm = new frm_DangNhap();
+            frm_Home frm = new frm_Home();
             frm.Visible = true;
         }
 
