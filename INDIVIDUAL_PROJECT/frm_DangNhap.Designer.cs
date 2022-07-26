@@ -74,7 +74,8 @@
             // 
             this.lbl_ThongBao.AutoSize = true;
             this.lbl_ThongBao.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_ThongBao.Location = new System.Drawing.Point(248, 256);
+            this.lbl_ThongBao.ForeColor = System.Drawing.Color.Red;
+            this.lbl_ThongBao.Location = new System.Drawing.Point(152, 258);
             this.lbl_ThongBao.Name = "lbl_ThongBao";
             this.lbl_ThongBao.Size = new System.Drawing.Size(0, 27);
             this.lbl_ThongBao.TabIndex = 3;
@@ -92,6 +93,7 @@
             this.txt_MatKhau.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_MatKhau.Location = new System.Drawing.Point(325, 184);
             this.txt_MatKhau.Name = "txt_MatKhau";
+            this.txt_MatKhau.PasswordChar = '*';
             this.txt_MatKhau.Size = new System.Drawing.Size(211, 34);
             this.txt_MatKhau.TabIndex = 5;
             // 

@@ -30,6 +30,7 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btn_LamMoi = new System.Windows.Forms.Button();
             this.txt_HinhAnh = new System.Windows.Forms.TextBox();
             this.btn_Thoat = new System.Windows.Forms.Button();
             this.btn_Xoa = new System.Windows.Forms.Button();
@@ -71,6 +72,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btn_LamMoi);
             this.groupBox1.Controls.Add(this.txt_HinhAnh);
             this.groupBox1.Controls.Add(this.btn_Thoat);
             this.groupBox1.Controls.Add(this.btn_Xoa);
@@ -99,6 +101,16 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin cá nhân";
             // 
+            // btn_LamMoi
+            // 
+            this.btn_LamMoi.Location = new System.Drawing.Point(869, 225);
+            this.btn_LamMoi.Name = "btn_LamMoi";
+            this.btn_LamMoi.Size = new System.Drawing.Size(108, 34);
+            this.btn_LamMoi.TabIndex = 24;
+            this.btn_LamMoi.Text = "Làm mới";
+            this.btn_LamMoi.UseVisualStyleBackColor = true;
+            this.btn_LamMoi.Click += new System.EventHandler(this.btn_LamMoi_Click);
+            // 
             // txt_HinhAnh
             // 
             this.txt_HinhAnh.Location = new System.Drawing.Point(984, 165);
@@ -108,30 +120,33 @@
             // 
             // btn_Thoat
             // 
-            this.btn_Thoat.Location = new System.Drawing.Point(955, 225);
+            this.btn_Thoat.Location = new System.Drawing.Point(983, 225);
             this.btn_Thoat.Name = "btn_Thoat";
             this.btn_Thoat.Size = new System.Drawing.Size(108, 34);
             this.btn_Thoat.TabIndex = 22;
             this.btn_Thoat.Text = "Thoát";
             this.btn_Thoat.UseVisualStyleBackColor = true;
+            this.btn_Thoat.Click += new System.EventHandler(this.btn_Thoat_Click);
             // 
             // btn_Xoa
             // 
-            this.btn_Xoa.Location = new System.Drawing.Point(811, 225);
+            this.btn_Xoa.Location = new System.Drawing.Point(755, 225);
             this.btn_Xoa.Name = "btn_Xoa";
             this.btn_Xoa.Size = new System.Drawing.Size(108, 34);
             this.btn_Xoa.TabIndex = 21;
             this.btn_Xoa.Text = "Xoá";
             this.btn_Xoa.UseVisualStyleBackColor = true;
+            this.btn_Xoa.Click += new System.EventHandler(this.btn_Xoa_Click);
             // 
             // btn_Sua
             // 
-            this.btn_Sua.Location = new System.Drawing.Point(674, 225);
+            this.btn_Sua.Location = new System.Drawing.Point(641, 225);
             this.btn_Sua.Name = "btn_Sua";
             this.btn_Sua.Size = new System.Drawing.Size(108, 34);
             this.btn_Sua.TabIndex = 20;
             this.btn_Sua.Text = "Sửa";
             this.btn_Sua.UseVisualStyleBackColor = true;
+            this.btn_Sua.Click += new System.EventHandler(this.btn_Sua_Click);
             // 
             // btn_Them
             // 
@@ -290,6 +305,7 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(1127, 164);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // frm_QuanLyNhanVien
             // 
@@ -301,6 +317,7 @@
             this.Controls.Add(this.label1);
             this.Name = "frm_QuanLyNhanVien";
             this.Text = "frm_QuanLyNhanVien";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frm_QuanLyNhanVien_FormClosing);
             this.Load += new System.EventHandler(this.frm_QuanLyNhanVien_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -338,5 +355,6 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.TextBox txt_HinhAnh;
+        private System.Windows.Forms.Button btn_LamMoi;
     }
 }
