@@ -96,10 +96,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="BanHang.mdf">
+    <Content Include="App_Data\BanHang.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="BanHang_log.ldf">
+    <Content Include="App_Data\BanHang_log.ldf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>BanHang.mdf</DependentUpon>
     </Content>
