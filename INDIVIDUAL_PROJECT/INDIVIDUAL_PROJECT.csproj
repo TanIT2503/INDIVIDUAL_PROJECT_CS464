@@ -48,9 +48,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System">
-      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\System.dll</HintPath>
-    </Reference>
+    <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -63,20 +61,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CustomPanel.cs">
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="frm_DangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frm_DangNhap.Designer.cs">
       <DependentUpon>frm_DangNhap.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frm_Home.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frm_Home.Designer.cs">
-      <DependentUpon>frm_Home.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_QuanLyNhanVien.cs">
       <SubType>Form</SubType>
@@ -97,16 +86,22 @@
       <DependentUpon>HoaDon.cs</DependentUpon>
     </Compile>
     <Compile Include="LopDungChung.cs" />
+    <Compile Include="NhapHangHoa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NhapHangHoa.Designer.cs">
+      <DependentUpon>NhapHangHoa.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="CustomPanel.resx">
-      <DependentUpon>CustomPanel.cs</DependentUpon>
-    </EmbeddedResource>
+    <Compile Include="QuanLyKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyKhachHang.Designer.cs">
+      <DependentUpon>QuanLyKhachHang.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="frm_DangNhap.resx">
       <DependentUpon>frm_DangNhap.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frm_Home.resx">
-      <DependentUpon>frm_Home.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_QuanLyNhanVien.resx">
       <DependentUpon>frm_QuanLyNhanVien.cs</DependentUpon>
@@ -117,6 +112,9 @@
     <EmbeddedResource Include="HoaDon.resx">
       <DependentUpon>HoaDon.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="NhapHangHoa.resx">
+      <DependentUpon>NhapHangHoa.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -126,6 +124,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="QuanLyKhachHang.resx">
+      <DependentUpon>QuanLyKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
