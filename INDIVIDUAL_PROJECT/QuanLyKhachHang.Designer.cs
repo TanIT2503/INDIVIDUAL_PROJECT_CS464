@@ -30,12 +30,12 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txt_TimKiem = new System.Windows.Forms.TextBox();
             this.btn_Clear = new System.Windows.Forms.Button();
             this.btn_Sua = new System.Windows.Forms.Button();
             this.btn_Xoa = new System.Windows.Forms.Button();
             this.btn_Them = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.cb_Search = new System.Windows.Forms.ComboBox();
+            this.btn_Tim = new System.Windows.Forms.Button();
             this.dt_NgaySinh = new System.Windows.Forms.DateTimePicker();
             this.cb_LoaiKH = new System.Windows.Forms.ComboBox();
             this.cb_GioiTinh = new System.Windows.Forms.ComboBox();
@@ -70,12 +70,12 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.txt_TimKiem);
             this.groupBox1.Controls.Add(this.btn_Clear);
             this.groupBox1.Controls.Add(this.btn_Sua);
             this.groupBox1.Controls.Add(this.btn_Xoa);
             this.groupBox1.Controls.Add(this.btn_Them);
-            this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Controls.Add(this.cb_Search);
+            this.groupBox1.Controls.Add(this.btn_Tim);
             this.groupBox1.Controls.Add(this.dt_NgaySinh);
             this.groupBox1.Controls.Add(this.cb_LoaiKH);
             this.groupBox1.Controls.Add(this.cb_GioiTinh);
@@ -97,6 +97,13 @@
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Nhập thông tin";
+            // 
+            // txt_TimKiem
+            // 
+            this.txt_TimKiem.Location = new System.Drawing.Point(616, 200);
+            this.txt_TimKiem.Name = "txt_TimKiem";
+            this.txt_TimKiem.Size = new System.Drawing.Size(188, 22);
+            this.txt_TimKiem.TabIndex = 22;
             // 
             // btn_Clear
             // 
@@ -142,23 +149,16 @@
             this.btn_Them.UseVisualStyleBackColor = true;
             this.btn_Them.Click += new System.EventHandler(this.btn_Them_Click);
             // 
-            // button1
+            // btn_Tim
             // 
-            this.button1.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.button1.Location = new System.Drawing.Point(784, 199);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(101, 36);
-            this.button1.TabIndex = 17;
-            this.button1.Text = "TÌM KIẾM";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // cb_Search
-            // 
-            this.cb_Search.FormattingEnabled = true;
-            this.cb_Search.Location = new System.Drawing.Point(626, 199);
-            this.cb_Search.Name = "cb_Search";
-            this.cb_Search.Size = new System.Drawing.Size(121, 24);
-            this.cb_Search.TabIndex = 15;
+            this.btn_Tim.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btn_Tim.Location = new System.Drawing.Point(825, 193);
+            this.btn_Tim.Name = "btn_Tim";
+            this.btn_Tim.Size = new System.Drawing.Size(101, 36);
+            this.btn_Tim.TabIndex = 17;
+            this.btn_Tim.Text = "TÌM KIẾM";
+            this.btn_Tim.UseVisualStyleBackColor = true;
+            this.btn_Tim.Click += new System.EventHandler(this.btn_Tim_Click);
             // 
             // dt_NgaySinh
             // 
@@ -316,6 +316,7 @@
             this.data_DanhSachKH.RowTemplate.Height = 24;
             this.data_DanhSachKH.Size = new System.Drawing.Size(1019, 173);
             this.data_DanhSachKH.TabIndex = 0;
+            this.data_DanhSachKH.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.data_DanhSachKH_CellClick);
             // 
             // QuanLyKhachHang
             // 
@@ -345,8 +346,7 @@
         private System.Windows.Forms.Button btn_Sua;
         private System.Windows.Forms.Button btn_Xoa;
         private System.Windows.Forms.Button btn_Them;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ComboBox cb_Search;
+        private System.Windows.Forms.Button btn_Tim;
         private System.Windows.Forms.DateTimePicker dt_NgaySinh;
         private System.Windows.Forms.ComboBox cb_LoaiKH;
         private System.Windows.Forms.ComboBox cb_GioiTinh;
@@ -354,7 +354,6 @@
         private System.Windows.Forms.TextBox txt_SoKH;
         private System.Windows.Forms.TextBox txt_TenKH;
         private System.Windows.Forms.TextBox txt_IDKH;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label lb_SoKH;
         private System.Windows.Forms.Label lb_NgaySinh;
@@ -364,5 +363,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.DataGridView data_DanhSachKH;
+        private System.Windows.Forms.TextBox txt_TimKiem;
+        private System.Windows.Forms.Label label9;
     }
 }

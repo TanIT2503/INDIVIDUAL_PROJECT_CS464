@@ -31,6 +31,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NhapHangHoa));
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txt_HinhAnh = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.btn_Clear = new System.Windows.Forms.Button();
             this.btn_Sua = new System.Windows.Forms.Button();
             this.btn_Xoa = new System.Windows.Forms.Button();
@@ -54,13 +57,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.data_DSSanPham = new System.Windows.Forms.DataGridView();
-            this.label8 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.txt_HinhAnh = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.data_DSSanPham)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -105,6 +105,34 @@
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Nhập thông tin ";
+            // 
+            // txt_HinhAnh
+            // 
+            this.txt_HinhAnh.Location = new System.Drawing.Point(935, 240);
+            this.txt_HinhAnh.Name = "txt_HinhAnh";
+            this.txt_HinhAnh.Size = new System.Drawing.Size(100, 22);
+            this.txt_HinhAnh.TabIndex = 33;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(921, 98);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(128, 111);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 32;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label8.Location = new System.Drawing.Point(944, 49);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(91, 27);
+            this.label8.TabIndex = 31;
+            this.label8.Text = "Hình ảnh";
             // 
             // btn_Clear
             // 
@@ -224,6 +252,7 @@
             this.btn_Tim.TabIndex = 18;
             this.btn_Tim.Text = "Tìm";
             this.btn_Tim.UseVisualStyleBackColor = true;
+            this.btn_Tim.Click += new System.EventHandler(this.btn_Tim_Click);
             // 
             // txt_TimKiem
             // 
@@ -316,7 +345,7 @@
             this.groupBox2.Controls.Add(this.data_DSSanPham);
             this.groupBox2.Location = new System.Drawing.Point(12, 369);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(928, 217);
+            this.groupBox2.Size = new System.Drawing.Size(1070, 217);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Danh sách sản phẩm";
@@ -328,35 +357,9 @@
             this.data_DSSanPham.Name = "data_DSSanPham";
             this.data_DSSanPham.RowHeadersWidth = 51;
             this.data_DSSanPham.RowTemplate.Height = 24;
-            this.data_DSSanPham.Size = new System.Drawing.Size(922, 196);
+            this.data_DSSanPham.Size = new System.Drawing.Size(1058, 196);
             this.data_DSSanPham.TabIndex = 0;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label8.Location = new System.Drawing.Point(944, 49);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(91, 27);
-            this.label8.TabIndex = 31;
-            this.label8.Text = "Hình ảnh";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(921, 98);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(128, 111);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 32;
-            this.pictureBox1.TabStop = false;
-            // 
-            // txt_HinhAnh
-            // 
-            this.txt_HinhAnh.Location = new System.Drawing.Point(935, 240);
-            this.txt_HinhAnh.Name = "txt_HinhAnh";
-            this.txt_HinhAnh.Size = new System.Drawing.Size(100, 22);
-            this.txt_HinhAnh.TabIndex = 33;
+            this.data_DSSanPham.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.data_DSSanPham_CellClick);
             // 
             // NhapHangHoa
             // 
@@ -371,9 +374,9 @@
             this.Load += new System.EventHandler(this.NhapHangHoa_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.data_DSSanPham)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

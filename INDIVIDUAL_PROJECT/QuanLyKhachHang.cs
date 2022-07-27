@@ -22,9 +22,9 @@ namespace INDIVIDUAL_PROJECT
 
         private void QuanLyKhachHang_Load(object sender, EventArgs e)
         {
-            Load_ComboSearch();
+            
             Load_ComboKH();
-            //Load_ComboSearch();
+            
             Load_DSKhachHang();
         }
         public void Load_DSKhachHang()
@@ -37,13 +37,7 @@ namespace INDIVIDUAL_PROJECT
             
 
         }
-        private void Load_ComboSearch()
-        {
-            string sqlLoad_Combox = "select * from KHACHHANG";
-            cb_Search.DataSource = dungchung.LoadCombobox(sqlLoad_Combox);
-            cb_Search.DisplayMember = "MAKH";
-
-        }
+     
         private void Load_ComboKH()
         {
             string sqlLoad_Combo = "select * from LOAIKHACH";
@@ -59,9 +53,13 @@ namespace INDIVIDUAL_PROJECT
 
             String SqlThem = "Insert into KHACHHANG values('" + txt_IDKH.Text + "',N'" + txt_TenKH.Text + "',N'" + cb_GioiTinh.Text + "',convert(datetime,'" + dt_NgaySinh.Text+"',103),'" + txt_SoKH.Text + "' ,N'" + txt_DiaChi.Text + "',N'" + cb_LoaiKH.SelectedValue + "')";
             try
-            {
-                dungchung.NonQuery(SqlThem);
-                Load_DSKhachHang();
+            {  
+                if (txt_IDKH.Text == "") MessageBox.Show("Bạn không được để trống mã nhân viên");
+                else {
+                    dungchung.NonQuery(SqlThem);
+                    Load_DSKhachHang();
+                }
+                
             }
             catch
             {
@@ -96,6 +94,46 @@ namespace INDIVIDUAL_PROJECT
             txt_TenKH.Text = " ";
             cb_GioiTinh.Text = "";
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (txt_TimKiem.Text == "")
+            {
+               Load_DSKhachHang();
+           }
+           else
+           {
+                string sql_Tim = " select * from KHACHHANG where HOTEN like '%" + txt_TimKiem.Text + "%'";
+                data_DanhSachKH.DataSource = dungchung.LoadGrid(sql_Tim);
+           }
+       }
+
+
+
+        private void btn_Tim_Click(object sender, EventArgs e)
+        {
+            if (txt_TimKiem.Text == "")
+            {
+               Load_DSKhachHang();
+            }
+           else
+            {
+                string sql_Tim = " select * from KHACHHANG where HOTEN like '%" + txt_TimKiem.Text+ "%'";
+                data_DanhSachKH.DataSource = dungchung.LoadGrid(sql_Tim);
+            }
+
+        }
+
+        private void data_DanhSachKH_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txt_TenKH.Text = data_DanhSachKH.CurrentRow.Cells["HOTEN"].Value.ToString();
+            txt_IDKH.Text=data_DanhSachKH.CurrentRow.Cells["MAKH"].Value.ToString();
+            txt_DiaChi.Text = data_DanhSachKH.CurrentRow.Cells["DIACHI"].Value.ToString();
+            txt_SoKH.Text = data_DanhSachKH.CurrentRow.Cells["SDT"].Value.ToString();
+            cb_GioiTinh.Text = data_DanhSachKH.CurrentRow.Cells["GIOITINH"].Value.ToString();
+            cb_LoaiKH.Text = data_DanhSachKH.CurrentRow.Cells["MALOAIKHACH"].Value.ToString();
+            cb_LoaiKH.Text = data_DanhSachKH.CurrentRow.Cells["MALOAIKHACH"].Value.ToString();
         }
     }
 }
