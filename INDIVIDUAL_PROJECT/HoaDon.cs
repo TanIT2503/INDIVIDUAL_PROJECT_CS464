@@ -30,8 +30,15 @@ namespace INDIVIDUAL_PROJECT
             string sqlthem = "insert into HOADON values ('" + txt_macode.Text + "','" + dateTimePicker1.Value + "','" + cb_manv.Text + "','" + cb_makh.Text + "','" + cb_masp.Text + "','" + txt_soluong.Text + "','" + txt_giamgia.Text + "')";
             try
             {
-                lopchung.NonQuery(sqlthem);
-                LoadData();
+                if (txt_macode.Text == "")
+                {
+                    MessageBox.Show("Bạn chưa nhập mã nhân viên..");
+                }
+                else
+                {
+                    lopchung.NonQuery(sqlthem);
+                    LoadData();
+                }
             }catch
             {
                 MessageBox.Show("Mã bị trùng!");
@@ -91,6 +98,12 @@ namespace INDIVIDUAL_PROJECT
                 string sqltim = "select * from HOADON where MAHD like '%" + txt_tim.Text + "%'";
                 dataGridView1.DataSource = lopchung.LoadGrid(sqltim);
             }
+        }
+
+        private void HoaDon_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            frm_Home frm = new frm_Home();
+            frm.Visible = true;
         }
     }
 }
