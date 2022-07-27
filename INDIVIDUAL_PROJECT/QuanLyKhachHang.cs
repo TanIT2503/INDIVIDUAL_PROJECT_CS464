@@ -135,5 +135,11 @@ namespace INDIVIDUAL_PROJECT
             cb_LoaiKH.Text = data_DanhSachKH.CurrentRow.Cells["MALOAIKHACH"].Value.ToString();
             cb_LoaiKH.Text = data_DanhSachKH.CurrentRow.Cells["MALOAIKHACH"].Value.ToString();
         }
+
+        private void QuanLyKhachHang_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            frm_Home frm = new frm_Home();
+            frm.Visible = true;
+        }
     }
 }

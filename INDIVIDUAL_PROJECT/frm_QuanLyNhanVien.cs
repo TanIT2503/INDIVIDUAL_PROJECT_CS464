@@ -24,11 +24,19 @@ namespace INDIVIDUAL_PROJECT
         private void btn_Them_Click(object sender, EventArgs e)
         {
             string sqlThem = "insert into NHANVIEN Values('" + txt_MaNhanVien.Text + "', N'" + txt_HoTen.Text + "', N'" + cbx_GioiTinh.Text + "', Convert(DateTime,'" + dt_NgaySinh.Text + "',103), '" + txt_SoDT.Text + "', N'" + txt_DiaChi.Text + "', '" + txt_Luong.Text + "', '"+ txt_HinhAnh.Text +"')";
-            pct_HinhAnh.Image.Save(duongdan + txt_HinhAnh.Text);
+            //pct_HinhAnh.Image.Save(duongdan + txt_HinhAnh.Text);
             try
             {
-                lopDungChung.NonQuery(sqlThem);
-                LoadData();
+                if (txt_MaNhanVien.Text == "")
+                {
+                    MessageBox.Show("Bạn chưa nhập mã nhân viên..");
+                }
+                else
+                {
+                    lopDungChung.NonQuery(sqlThem);
+                    LoadData();
+                }
+                
             }
             catch
             {
@@ -59,10 +67,11 @@ namespace INDIVIDUAL_PROJECT
 
         private void btn_Sua_Click(object sender, EventArgs e)
         {
-            LoadData();
+            
             string sqlSua = "Update NHANVIEN set HOTEN = N'" + txt_HoTen.Text + "', GIOITINH = N'" + cbx_GioiTinh.Text + "', NGAYSINH = Convert(DateTime,'" + dt_NgaySinh.Text + "',103), SDT = '" + txt_SoDT.Text + "', DIACHI = N'" + txt_DiaChi.Text + "', LUONG = '" + txt_Luong.Text + "', HINHANH = '" + txt_HinhAnh.Text + "' where MANV = '" + txt_MaNhanVien.Text + "'";
             pct_HinhAnh.Image.Save(duongdan + txt_HinhAnh.Text);
             lopDungChung.NonQuery(sqlSua);
+            LoadData();
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -85,6 +94,7 @@ namespace INDIVIDUAL_PROJECT
             try
             {
                 lopDungChung.NonQuery(sqlXoa);
+                File.Delete(duongdan + txt_HinhAnh.Text);
                 LoadData();
             }
             catch
@@ -94,17 +104,6 @@ namespace INDIVIDUAL_PROJECT
             
         }
 
-        private void btn_Thoat_Click(object sender, EventArgs e)
-        {
-            frm_DangNhap frm = new frm_DangNhap();
-            DialogResult dialogResult;
-            dialogResult = MessageBox.Show("Bạn có muốn thoát chương trình.", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (dialogResult == DialogResult.Yes)
-            {
-                this.Close();
-                frm.Visible = true;
-            }
-        }
 
         private void btn_LamMoi_Click(object sender, EventArgs e)
         {
@@ -121,8 +120,21 @@ namespace INDIVIDUAL_PROJECT
 
         private void frm_QuanLyNhanVien_FormClosing(object sender, FormClosingEventArgs e)
         {
-            frm_DangNhap frm = new frm_DangNhap();
+            frm_Home frm = new frm_Home();
             frm.Visible = true;
+        }
+
+        private void btn_Tim_Click(object sender, EventArgs e)
+        {
+            if(txt_TimKiem.Text == "")
+            {
+                LoadData();
+            }
+            else
+            {
+                string sqlTimKiem = "select * from NHANVIEN where (MANV like '%" + txt_TimKiem.Text + "%') or (HOTEN like '%" + txt_TimKiem.Text + "%') or (GIOITINH like '%" + txt_TimKiem.Text + "%' )";
+                dataGridView1.DataSource = lopDungChung.LoadGrid(sqlTimKiem);
+            }
         }
     }
 }

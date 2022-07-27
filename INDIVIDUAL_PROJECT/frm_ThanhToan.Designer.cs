@@ -34,7 +34,6 @@
             this.cb_MaNV = new System.Windows.Forms.ComboBox();
             this.txt_MaTT = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.btn_Thoat = new System.Windows.Forms.Button();
             this.btn_Reset = new System.Windows.Forms.Button();
             this.btn_Sua = new System.Windows.Forms.Button();
             this.btn_Xoa = new System.Windows.Forms.Button();
@@ -70,7 +69,6 @@
             this.groupBox1.Controls.Add(this.cb_MaNV);
             this.groupBox1.Controls.Add(this.txt_MaTT);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.btn_Thoat);
             this.groupBox1.Controls.Add(this.btn_Reset);
             this.groupBox1.Controls.Add(this.btn_Sua);
             this.groupBox1.Controls.Add(this.btn_Xoa);
@@ -83,10 +81,10 @@
             this.groupBox1.Controls.Add(this.lbl_ThuongThem);
             this.groupBox1.Controls.Add(this.lbl_GioLV);
             this.groupBox1.Controls.Add(this.lbl_MaNV);
-            this.groupBox1.Font = new System.Drawing.Font("Segoe UI Variable Small", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(54, 85);
+            this.groupBox1.Font = new System.Drawing.Font("Segoe UI Variable Text Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(12, 78);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1113, 226);
+            this.groupBox1.Size = new System.Drawing.Size(1192, 233);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Nhập thông tin";
@@ -94,9 +92,9 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Segoe UI Variable Small", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(1005, 25);
+            this.button1.Location = new System.Drawing.Point(1088, 43);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 35);
+            this.button1.Size = new System.Drawing.Size(81, 37);
             this.button1.TabIndex = 19;
             this.button1.Text = "Tìm";
             this.button1.UseVisualStyleBackColor = true;
@@ -105,45 +103,34 @@
             // cb_MaNV
             // 
             this.cb_MaNV.FormattingEnabled = true;
-            this.cb_MaNV.Location = new System.Drawing.Point(475, 33);
+            this.cb_MaNV.Location = new System.Drawing.Point(529, 42);
             this.cb_MaNV.Name = "cb_MaNV";
-            this.cb_MaNV.Size = new System.Drawing.Size(211, 25);
+            this.cb_MaNV.Size = new System.Drawing.Size(211, 35);
             this.cb_MaNV.TabIndex = 18;
             // 
             // txt_MaTT
             // 
-            this.txt_MaTT.Location = new System.Drawing.Point(164, 35);
+            this.txt_MaTT.Location = new System.Drawing.Point(188, 39);
             this.txt_MaTT.Name = "txt_MaTT";
-            this.txt_MaTT.Size = new System.Drawing.Size(133, 25);
+            this.txt_MaTT.Size = new System.Drawing.Size(169, 34);
             this.txt_MaTT.TabIndex = 17;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(11, 33);
+            this.label1.Location = new System.Drawing.Point(14, 42);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(147, 27);
+            this.label1.Size = new System.Drawing.Size(146, 27);
             this.label1.TabIndex = 16;
             this.label1.Text = "Mã thanh toán:";
-            // 
-            // btn_Thoat
-            // 
-            this.btn_Thoat.Font = new System.Drawing.Font("Segoe UI Variable Small", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Thoat.Location = new System.Drawing.Point(991, 176);
-            this.btn_Thoat.Name = "btn_Thoat";
-            this.btn_Thoat.Size = new System.Drawing.Size(75, 35);
-            this.btn_Thoat.TabIndex = 15;
-            this.btn_Thoat.Text = "Thoát";
-            this.btn_Thoat.UseVisualStyleBackColor = true;
-            this.btn_Thoat.Click += new System.EventHandler(this.btn_Thoat_Click);
             // 
             // btn_Reset
             // 
             this.btn_Reset.Font = new System.Drawing.Font("Segoe UI Variable Small", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Reset.Location = new System.Drawing.Point(879, 176);
+            this.btn_Reset.Location = new System.Drawing.Point(1051, 165);
             this.btn_Reset.Name = "btn_Reset";
-            this.btn_Reset.Size = new System.Drawing.Size(94, 35);
+            this.btn_Reset.Size = new System.Drawing.Size(118, 44);
             this.btn_Reset.TabIndex = 14;
             this.btn_Reset.Text = "Nhập lại";
             this.btn_Reset.UseVisualStyleBackColor = true;
@@ -152,9 +139,9 @@
             // btn_Sua
             // 
             this.btn_Sua.Font = new System.Drawing.Font("Segoe UI Variable Small", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Sua.Location = new System.Drawing.Point(696, 176);
+            this.btn_Sua.Location = new System.Drawing.Point(815, 165);
             this.btn_Sua.Name = "btn_Sua";
-            this.btn_Sua.Size = new System.Drawing.Size(75, 35);
+            this.btn_Sua.Size = new System.Drawing.Size(99, 44);
             this.btn_Sua.TabIndex = 13;
             this.btn_Sua.Text = "Sửa";
             this.btn_Sua.UseVisualStyleBackColor = true;
@@ -163,9 +150,9 @@
             // btn_Xoa
             // 
             this.btn_Xoa.Font = new System.Drawing.Font("Segoe UI Variable Small", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Xoa.Location = new System.Drawing.Point(788, 176);
+            this.btn_Xoa.Location = new System.Drawing.Point(935, 165);
             this.btn_Xoa.Name = "btn_Xoa";
-            this.btn_Xoa.Size = new System.Drawing.Size(75, 35);
+            this.btn_Xoa.Size = new System.Drawing.Size(99, 44);
             this.btn_Xoa.TabIndex = 12;
             this.btn_Xoa.Text = "Xóa";
             this.btn_Xoa.UseVisualStyleBackColor = true;
@@ -173,9 +160,9 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(803, 197);
+            this.button2.Location = new System.Drawing.Point(935, 186);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(8, 8);
+            this.button2.Size = new System.Drawing.Size(32, 17);
             this.button2.TabIndex = 11;
             this.button2.Text = "button2";
             this.button2.UseVisualStyleBackColor = true;
@@ -183,9 +170,9 @@
             // btn_Them
             // 
             this.btn_Them.Font = new System.Drawing.Font("Segoe UI Variable Small", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Them.Location = new System.Drawing.Point(604, 176);
+            this.btn_Them.Location = new System.Drawing.Point(700, 165);
             this.btn_Them.Name = "btn_Them";
-            this.btn_Them.Size = new System.Drawing.Size(75, 35);
+            this.btn_Them.Size = new System.Drawing.Size(99, 44);
             this.btn_Them.TabIndex = 10;
             this.btn_Them.Text = "Thêm";
             this.btn_Them.UseVisualStyleBackColor = true;
@@ -193,30 +180,30 @@
             // 
             // txt_Tim
             // 
-            this.txt_Tim.Location = new System.Drawing.Point(819, 31);
+            this.txt_Tim.Location = new System.Drawing.Point(889, 42);
             this.txt_Tim.Name = "txt_Tim";
-            this.txt_Tim.Size = new System.Drawing.Size(180, 25);
+            this.txt_Tim.Size = new System.Drawing.Size(180, 34);
             this.txt_Tim.TabIndex = 9;
             // 
             // txt_ThuongThem
             // 
-            this.txt_ThuongThem.Location = new System.Drawing.Point(475, 110);
+            this.txt_ThuongThem.Location = new System.Drawing.Point(529, 111);
             this.txt_ThuongThem.Name = "txt_ThuongThem";
-            this.txt_ThuongThem.Size = new System.Drawing.Size(211, 25);
+            this.txt_ThuongThem.Size = new System.Drawing.Size(211, 34);
             this.txt_ThuongThem.TabIndex = 7;
             // 
             // txt_GioLV
             // 
-            this.txt_GioLV.Location = new System.Drawing.Point(164, 104);
+            this.txt_GioLV.Location = new System.Drawing.Point(188, 111);
             this.txt_GioLV.Name = "txt_GioLV";
-            this.txt_GioLV.Size = new System.Drawing.Size(133, 25);
+            this.txt_GioLV.Size = new System.Drawing.Size(169, 34);
             this.txt_GioLV.TabIndex = 5;
             // 
             // lbl_Tim
             // 
             this.lbl_Tim.AutoSize = true;
             this.lbl_Tim.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Tim.Location = new System.Drawing.Point(710, 31);
+            this.lbl_Tim.Location = new System.Drawing.Point(782, 45);
             this.lbl_Tim.Name = "lbl_Tim";
             this.lbl_Tim.Size = new System.Drawing.Size(101, 27);
             this.lbl_Tim.TabIndex = 4;
@@ -226,7 +213,7 @@
             // 
             this.lbl_ThuongThem.AutoSize = true;
             this.lbl_ThuongThem.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_ThuongThem.Location = new System.Drawing.Point(323, 105);
+            this.lbl_ThuongThem.Location = new System.Drawing.Point(377, 114);
             this.lbl_ThuongThem.Name = "lbl_ThuongThem";
             this.lbl_ThuongThem.Size = new System.Drawing.Size(139, 27);
             this.lbl_ThuongThem.TabIndex = 3;
@@ -236,7 +223,7 @@
             // 
             this.lbl_GioLV.AutoSize = true;
             this.lbl_GioLV.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_GioLV.Location = new System.Drawing.Point(11, 105);
+            this.lbl_GioLV.Location = new System.Drawing.Point(14, 114);
             this.lbl_GioLV.Name = "lbl_GioLV";
             this.lbl_GioLV.Size = new System.Drawing.Size(128, 27);
             this.lbl_GioLV.TabIndex = 2;
@@ -246,7 +233,7 @@
             // 
             this.lbl_MaNV.AutoSize = true;
             this.lbl_MaNV.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_MaNV.Location = new System.Drawing.Point(325, 33);
+            this.lbl_MaNV.Location = new System.Drawing.Point(379, 42);
             this.lbl_MaNV.Name = "lbl_MaNV";
             this.lbl_MaNV.Size = new System.Drawing.Size(140, 27);
             this.lbl_MaNV.TabIndex = 0;
@@ -255,10 +242,10 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.dataGridView1);
-            this.groupBox2.Font = new System.Drawing.Font("Segoe UI Variable Small", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(54, 335);
+            this.groupBox2.Font = new System.Drawing.Font("Segoe UI Variable Text Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.Location = new System.Drawing.Point(12, 335);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(1113, 211);
+            this.groupBox2.Size = new System.Drawing.Size(1192, 229);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Danh sách lương";
@@ -266,11 +253,11 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(16, 26);
+            this.dataGridView1.Location = new System.Drawing.Point(6, 33);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1081, 185);
+            this.dataGridView1.Size = new System.Drawing.Size(1180, 190);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
@@ -284,6 +271,7 @@
             this.Controls.Add(this.lbl_ThanhToan);
             this.Name = "frm_ThanhToan";
             this.Text = "Thanh Toán Lương Nhân Viên";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frm_ThanhToan_FormClosed);
             this.Load += new System.EventHandler(this.frm_ThanhToan_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -306,7 +294,6 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TextBox txt_MaTT;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btn_Thoat;
         private System.Windows.Forms.Button btn_Reset;
         private System.Windows.Forms.Button btn_Sua;
         private System.Windows.Forms.Button btn_Xoa;
