@@ -19,7 +19,9 @@ namespace INDIVIDUAL_PROJECT
 
         private void quảnLýKháchHàngToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+            QuanLyKhachHang frm = new QuanLyKhachHang();
+            frm.Show();
+            this.Visible = false; 
         }
 
         private void quảnLýNhânViênToolStripMenuItem_Click(object sender, EventArgs e)
@@ -60,5 +62,11 @@ namespace INDIVIDUAL_PROJECT
             }
         }
 
+        private void quảnLýNhậpHàngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            NhapHangHoa frm = new NhapHangHoa();
+            frm.Show();
+            this.Visible = false;
+        }
     }
 }
