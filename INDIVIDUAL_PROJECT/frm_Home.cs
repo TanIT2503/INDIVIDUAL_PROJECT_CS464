@@ -35,5 +35,30 @@ namespace INDIVIDUAL_PROJECT
             frm.Show();
             this.Visible = false;
         }
+
+        private void thanhToánLươngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frm_ThanhToan frm = new frm_ThanhToan();
+            frm.Show();
+            this.Visible = false;
+        }
+
+        private void lậpHoáĐơnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            HoaDon frm = new HoaDon();
+            frm.Show();
+            this.Visible=false;
+        }
+
+        private void frm_Home_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            DialogResult dialogResult;
+            dialogResult = MessageBox.Show("Bạn có muốn thoát chương trình?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dialogResult == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
+
     }
 }

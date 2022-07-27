@@ -22,8 +22,22 @@ namespace INDIVIDUAL_PROJECT
         private void btn_Them_Click(object sender, EventArgs e)
         {
             string sqlThem = "insert into THANHTOAN values('"+txt_MaTT.Text+"','"+cb_MaNV.Text+"','"+txt_GioLV.Text+"','"+txt_ThuongThem.Text+"')";
-            lopChung.NonQuery(sqlThem);
-            LoadGrid();
+            try
+            {
+                if (txt_MaTT.Text == "")
+                {
+                    MessageBox.Show("Bạn chưa nhập mã nhân viên..");
+                }
+                else
+                {
+                    lopChung.NonQuery(sqlThem);
+                    LoadGrid();
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Mã thanh toán bị trùng.");
+            }
         }
 
         public void LoadGrid()
@@ -95,6 +109,12 @@ namespace INDIVIDUAL_PROJECT
                 string sqlTim = "select t.MATT,t.MANV,nv.HOTEN,t.GIOLAMVIEC,t.THUONGTHEM, (nv.LUONG*t.GIOLAMVIEC)+t.THUONGTHEM as TONGLUONG from THANHTOAN as t join NHANVIEN as nv on t.MANV=nv.MANV where t.MATT like ('%" + txt_Tim.Text + "%') or nv.HOTEN like ('%" + txt_Tim.Text + "%')";
                 dataGridView1.DataSource = lopChung.LoadGrid(sqlTim);
             }
+        }
+
+        private void frm_ThanhToan_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            frm_Home frm = new frm_Home();
+            frm.Visible = true;
         }
     }
 }
