@@ -221,6 +221,7 @@
             // 
             // pct_HinhAnh
             // 
+            this.pct_HinhAnh.Image = global::INDIVIDUAL_PROJECT.Properties.Resources.ic_fluent_image_add_24_regular1;
             this.pct_HinhAnh.Location = new System.Drawing.Point(984, 29);
             this.pct_HinhAnh.Name = "pct_HinhAnh";
             this.pct_HinhAnh.Size = new System.Drawing.Size(130, 130);

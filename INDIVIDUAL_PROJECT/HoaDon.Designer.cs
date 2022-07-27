@@ -30,6 +30,7 @@
         {
             this.label17 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.txt_tim = new System.Windows.Forms.TextBox();
             this.bt_timkiem = new System.Windows.Forms.Button();
             this.bt_xoa = new System.Windows.Forms.Button();
@@ -49,7 +50,6 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox1.SuspendLayout();
@@ -63,7 +63,7 @@
             this.label17.Font = new System.Drawing.Font("Segoe UI Variable Display", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.Location = new System.Drawing.Point(454, 9);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(214, 31);
+            this.label17.Size = new System.Drawing.Size(215, 31);
             this.label17.TabIndex = 31;
             this.label17.Text = "Hóa Đơn Bán Hàng";
             // 
@@ -97,6 +97,15 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin hoá đơn";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(575, 198);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(96, 27);
+            this.label1.TabIndex = 63;
+            this.label1.Text = "Tìm kiếm";
+            // 
             // txt_tim
             // 
             this.txt_tim.Location = new System.Drawing.Point(738, 196);
@@ -112,6 +121,7 @@
             this.bt_timkiem.TabIndex = 61;
             this.bt_timkiem.Text = "Tìm";
             this.bt_timkiem.UseVisualStyleBackColor = true;
+            this.bt_timkiem.Click += new System.EventHandler(this.bt_timkiem_Click_1);
             // 
             // bt_xoa
             // 
@@ -121,6 +131,7 @@
             this.bt_xoa.TabIndex = 60;
             this.bt_xoa.Text = "Xóa Bill";
             this.bt_xoa.UseVisualStyleBackColor = true;
+            this.bt_xoa.Click += new System.EventHandler(this.bt_xoa_Click_1);
             // 
             // bt_cancel
             // 
@@ -130,6 +141,7 @@
             this.bt_cancel.TabIndex = 59;
             this.bt_cancel.Text = "Sửa Bill";
             this.bt_cancel.UseVisualStyleBackColor = true;
+            this.bt_cancel.Click += new System.EventHandler(this.bt_cancel_Click_1);
             // 
             // button1
             // 
@@ -139,6 +151,7 @@
             this.button1.TabIndex = 58;
             this.button1.Text = "Thêm Bill";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // cb_masp
             // 
@@ -208,7 +221,7 @@
             this.label15.AutoSize = true;
             this.label15.Location = new System.Drawing.Point(40, 98);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(180, 27);
+            this.label15.Size = new System.Drawing.Size(181, 27);
             this.label15.TabIndex = 50;
             this.label15.Text = "Ngày Lập Hóa Đơn";
             // 
@@ -244,7 +257,7 @@
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(40, 47);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(123, 27);
+            this.label9.Size = new System.Drawing.Size(124, 27);
             this.label9.TabIndex = 46;
             this.label9.Text = "Mã Hoá Đơn";
             // 
@@ -265,15 +278,6 @@
             this.label5.Size = new System.Drawing.Size(108, 27);
             this.label5.TabIndex = 44;
             this.label5.Text = "Giảm giá%";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(575, 198);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(96, 27);
-            this.label1.TabIndex = 63;
-            this.label1.Text = "Tìm kiếm";
             // 
             // dataGridView1
             // 

@@ -24,26 +24,7 @@ namespace INDIVIDUAL_PROJECT
             dataGridView1.DataSource = lopchung.LoadGrid(sqlLoadDT);
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            
-            string sqlthem = "insert into HOADON values ('" + txt_macode.Text + "','" + dateTimePicker1.Value + "','" + cb_manv.Text + "','" + cb_makh.Text + "','" + cb_masp.Text + "','" + txt_soluong.Text + "','" + txt_giamgia.Text + "')";
-            try
-            {
-                if (txt_macode.Text == "")
-                {
-                    MessageBox.Show("Bạn chưa nhập mã nhân viên..");
-                }
-                else
-                {
-                    lopchung.NonQuery(sqlthem);
-                    LoadData();
-                }
-            }catch
-            {
-                MessageBox.Show("Mã bị trùng!");
-            }
-        }
+       
 
        public void LoadCombo()
         {
@@ -80,16 +61,49 @@ namespace INDIVIDUAL_PROJECT
             LoadData();
         }
 
-        private void bt_xoa_Click(object sender, EventArgs e)
+        
+
+       
+
+        private void HoaDon_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            frm_Home frm = new frm_Home();
+            frm.Visible = true;
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            string sqlthem = "insert into HOADON values ('" + txt_macode.Text + "', Convert(Datetime,'" + dateTimePicker1.Text + "',103),'" + cb_manv.Text + "','" + cb_makh.Text + "','" + cb_masp.Text + "','" + txt_soluong.Text + "','" + txt_giamgia.Text + "')";
+            
+                if (txt_macode.Text == "")
+                {
+                    MessageBox.Show("Bạn chưa nhập mã nhân viên..");
+                }
+                else
+                {
+                    lopchung.NonQuery(sqlthem);
+                    LoadData();
+                }
+            
+        }
+
+        private void bt_cancel_Click_1(object sender, EventArgs e)
+        {
+            string sqlSua = "update HOADON set NGAYLAPHD = Convert(Datetime,'"+dateTimePicker1.Text + "',103), MANV=N'" + cb_manv.Text + "', MAKH=N'" + cb_makh.Text + "', MASP=N'" + cb_masp.Text + "', SOLUONG=N'" + txt_soluong.Text + "', GIAMGIA=N'" + float.Parse(txt_giamgia.Text) + "' WHERE MAHD ='" + txt_macode.Text + "';";
+            lopchung.NonQuery(sqlSua);
+            LoadData();
+        }
+
+        private void bt_xoa_Click_1(object sender, EventArgs e)
         {
             string sqlXoa = "delete from HOADON where MAHD = '" + txt_macode.Text + "'";
             lopchung.NonQuery(sqlXoa);
             LoadData();
         }
 
-        private void bt_timkiem_Click(object sender, EventArgs e)
+        private void bt_timkiem_Click_1(object sender, EventArgs e)
         {
-            if(txt_tim.Text == "")
+            if (txt_tim.Text == "")
             {
                 LoadData();
             }
@@ -98,12 +112,6 @@ namespace INDIVIDUAL_PROJECT
                 string sqltim = "select * from HOADON where MAHD like '%" + txt_tim.Text + "%'";
                 dataGridView1.DataSource = lopchung.LoadGrid(sqltim);
             }
-        }
-
-        private void HoaDon_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            frm_Home frm = new frm_Home();
-            frm.Visible = true;
         }
     }
 }

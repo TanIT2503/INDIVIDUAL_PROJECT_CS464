@@ -24,9 +24,8 @@ namespace INDIVIDUAL_PROJECT
         private void btn_Them_Click(object sender, EventArgs e)
         {
             string sqlThem = "insert into NHANVIEN Values('" + txt_MaNhanVien.Text + "', N'" + txt_HoTen.Text + "', N'" + cbx_GioiTinh.Text + "', Convert(DateTime,'" + dt_NgaySinh.Text + "',103), '" + txt_SoDT.Text + "', N'" + txt_DiaChi.Text + "', '" + txt_Luong.Text + "', '"+ txt_HinhAnh.Text +"')";
-            //pct_HinhAnh.Image.Save(duongdan + txt_HinhAnh.Text);
-            try
-            {
+            pct_HinhAnh.Image.Save(duongdan + txt_HinhAnh.Text);
+            
                 if (txt_MaNhanVien.Text == "")
                 {
                     MessageBox.Show("Bạn chưa nhập mã nhân viên..");
@@ -37,11 +36,7 @@ namespace INDIVIDUAL_PROJECT
                     LoadData();
                 }
                 
-            }
-            catch
-            {
-                MessageBox.Show("Mã nhân viên bị trùng.");
-            }
+           
             
         }
 

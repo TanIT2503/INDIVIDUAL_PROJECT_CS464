@@ -43,6 +43,8 @@
             this.đăngXuấtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
@@ -70,8 +72,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -130,35 +130,35 @@
             // quảnLýKháchHàngToolStripMenuItem
             // 
             this.quảnLýKháchHàngToolStripMenuItem.Name = "quảnLýKháchHàngToolStripMenuItem";
-            this.quảnLýKháchHàngToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.quảnLýKháchHàngToolStripMenuItem.Size = new System.Drawing.Size(221, 26);
             this.quảnLýKháchHàngToolStripMenuItem.Text = "Quản lý khách hàng";
             this.quảnLýKháchHàngToolStripMenuItem.Click += new System.EventHandler(this.quảnLýKháchHàngToolStripMenuItem_Click);
             // 
             // quảnLýNhânViênToolStripMenuItem
             // 
             this.quảnLýNhânViênToolStripMenuItem.Name = "quảnLýNhânViênToolStripMenuItem";
-            this.quảnLýNhânViênToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.quảnLýNhânViênToolStripMenuItem.Size = new System.Drawing.Size(221, 26);
             this.quảnLýNhânViênToolStripMenuItem.Text = "Quản lý nhân viên";
             this.quảnLýNhânViênToolStripMenuItem.Click += new System.EventHandler(this.quảnLýNhânViênToolStripMenuItem_Click);
             // 
             // quảnLýNhậpHàngToolStripMenuItem
             // 
             this.quảnLýNhậpHàngToolStripMenuItem.Name = "quảnLýNhậpHàngToolStripMenuItem";
-            this.quảnLýNhậpHàngToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.quảnLýNhậpHàngToolStripMenuItem.Size = new System.Drawing.Size(221, 26);
             this.quảnLýNhậpHàngToolStripMenuItem.Text = "Quản lý nhập hàng";
             this.quảnLýNhậpHàngToolStripMenuItem.Click += new System.EventHandler(this.quảnLýNhậpHàngToolStripMenuItem_Click);
             // 
             // thanhToánLươngToolStripMenuItem
             // 
             this.thanhToánLươngToolStripMenuItem.Name = "thanhToánLươngToolStripMenuItem";
-            this.thanhToánLươngToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.thanhToánLươngToolStripMenuItem.Size = new System.Drawing.Size(221, 26);
             this.thanhToánLươngToolStripMenuItem.Text = "Thanh toán lương";
             this.thanhToánLươngToolStripMenuItem.Click += new System.EventHandler(this.thanhToánLươngToolStripMenuItem_Click);
             // 
             // lậpHoáĐơnToolStripMenuItem
             // 
             this.lậpHoáĐơnToolStripMenuItem.Name = "lậpHoáĐơnToolStripMenuItem";
-            this.lậpHoáĐơnToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.lậpHoáĐơnToolStripMenuItem.Size = new System.Drawing.Size(221, 26);
             this.lậpHoáĐơnToolStripMenuItem.Text = "Lập hoá đơn";
             this.lậpHoáĐơnToolStripMenuItem.Click += new System.EventHandler(this.lậpHoáĐơnToolStripMenuItem_Click);
             // 
@@ -208,6 +208,26 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(564, 183);
             this.panel4.TabIndex = 6;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Segoe UI Variable Text Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.Location = new System.Drawing.Point(188, 146);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(152, 22);
+            this.label23.TabIndex = 13;
+            this.label23.Text = "- Lớp dùng chung.";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI Variable Text Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(188, 103);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(135, 22);
+            this.label6.TabIndex = 12;
+            this.label6.Text = "- Form hoá đơn.";
             // 
             // label11
             // 
@@ -424,7 +444,7 @@
             this.label16.Font = new System.Drawing.Font("Segoe UI Variable Text Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.Location = new System.Drawing.Point(188, 145);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(384, 22);
+            this.label16.Size = new System.Drawing.Size(386, 22);
             this.label16.TabIndex = 6;
             this.label16.Text = "- Form sản phẩm. (Load hình ảnh, xoá, tìm kiếm)";
             // 
@@ -435,7 +455,7 @@
             this.label15.Font = new System.Drawing.Font("Segoe UI Variable Text Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.Location = new System.Drawing.Point(343, 101);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(205, 22);
+            this.label15.Size = new System.Drawing.Size(206, 22);
             this.label15.TabIndex = 5;
             this.label15.Text = "- Form thanh toán lương.";
             // 
@@ -486,26 +506,6 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI Variable Text Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(188, 103);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(134, 22);
-            this.label6.TabIndex = 12;
-            this.label6.Text = "- Form hoá đơn.";
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Segoe UI Variable Text Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(188, 146);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(152, 22);
-            this.label23.TabIndex = 13;
-            this.label23.Text = "- Lớp dùng chung.";
-            // 
             // frm_Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -517,7 +517,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frm_Home";
             this.Text = "Trang Chủ";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frm_Home_FormClosed);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frm_Home_FormClosing);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.groupBox1.ResumeLayout(false);

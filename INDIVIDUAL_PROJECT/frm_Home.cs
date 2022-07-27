@@ -52,21 +52,23 @@ namespace INDIVIDUAL_PROJECT
             this.Visible=false;
         }
 
-        private void frm_Home_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            DialogResult dialogResult;
-            dialogResult = MessageBox.Show("Bạn có muốn thoát chương trình?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (dialogResult == DialogResult.Yes)
-            {
-                Application.Exit();
-            }
-        }
+        
 
         private void quảnLýNhậpHàngToolStripMenuItem_Click(object sender, EventArgs e)
         {
             NhapHangHoa frm = new NhapHangHoa();
             frm.Show();
             this.Visible = false;
+        }
+
+        private void frm_Home_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult dialogResult;
+            dialogResult = MessageBox.Show("Bạn có muốn thoát chương trình?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dialogResult == DialogResult.No)
+            {
+                e.Cancel = true;
+            }
         }
     }
 }

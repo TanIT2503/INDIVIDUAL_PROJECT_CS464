@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NhapHangHoa));
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txt_HinhAnh = new System.Windows.Forms.TextBox();
@@ -105,7 +104,7 @@
             this.groupBox1.Size = new System.Drawing.Size(1192, 314);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Nhập thông tin ";
+            this.groupBox1.Text = "s";
             // 
             // txt_HinhAnh
             // 
@@ -116,7 +115,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Image = global::INDIVIDUAL_PROJECT.Properties.Resources.ic_fluent_image_add_24_regular;
             this.pictureBox1.Location = new System.Drawing.Point(1003, 51);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(128, 128);
