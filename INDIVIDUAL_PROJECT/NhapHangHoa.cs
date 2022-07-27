@@ -134,5 +134,11 @@ namespace INDIVIDUAL_PROJECT
             
             
         }
+
+        private void NhapHangHoa_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            frm_Home frm = new frm_Home();
+            frm.Visible = true;
+        }
     }
 }

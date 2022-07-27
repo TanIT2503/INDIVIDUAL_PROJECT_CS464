@@ -91,26 +91,27 @@
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Font = new System.Drawing.Font("Segoe UI Variable Text Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(12, 31);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1037, 306);
+            this.groupBox1.Size = new System.Drawing.Size(1192, 306);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Nhập thông tin";
             // 
             // txt_TimKiem
             // 
-            this.txt_TimKiem.Location = new System.Drawing.Point(616, 200);
+            this.txt_TimKiem.Location = new System.Drawing.Point(824, 211);
             this.txt_TimKiem.Name = "txt_TimKiem";
-            this.txt_TimKiem.Size = new System.Drawing.Size(188, 22);
+            this.txt_TimKiem.Size = new System.Drawing.Size(200, 34);
             this.txt_TimKiem.TabIndex = 22;
             // 
             // btn_Clear
             // 
             this.btn_Clear.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btn_Clear.Location = new System.Drawing.Point(898, 269);
+            this.btn_Clear.Location = new System.Drawing.Point(898, 258);
             this.btn_Clear.Name = "btn_Clear";
-            this.btn_Clear.Size = new System.Drawing.Size(92, 31);
+            this.btn_Clear.Size = new System.Drawing.Size(101, 37);
             this.btn_Clear.TabIndex = 21;
             this.btn_Clear.Text = "CLEAR";
             this.btn_Clear.UseVisualStyleBackColor = true;
@@ -119,9 +120,9 @@
             // btn_Sua
             // 
             this.btn_Sua.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btn_Sua.Location = new System.Drawing.Point(778, 269);
+            this.btn_Sua.Location = new System.Drawing.Point(778, 258);
             this.btn_Sua.Name = "btn_Sua";
-            this.btn_Sua.Size = new System.Drawing.Size(82, 31);
+            this.btn_Sua.Size = new System.Drawing.Size(91, 37);
             this.btn_Sua.TabIndex = 20;
             this.btn_Sua.Text = "SỬA";
             this.btn_Sua.UseVisualStyleBackColor = true;
@@ -130,9 +131,9 @@
             // btn_Xoa
             // 
             this.btn_Xoa.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btn_Xoa.Location = new System.Drawing.Point(650, 269);
+            this.btn_Xoa.Location = new System.Drawing.Point(663, 258);
             this.btn_Xoa.Name = "btn_Xoa";
-            this.btn_Xoa.Size = new System.Drawing.Size(87, 31);
+            this.btn_Xoa.Size = new System.Drawing.Size(96, 37);
             this.btn_Xoa.TabIndex = 19;
             this.btn_Xoa.Text = "XOÁ";
             this.btn_Xoa.UseVisualStyleBackColor = true;
@@ -141,9 +142,9 @@
             // btn_Them
             // 
             this.btn_Them.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btn_Them.Location = new System.Drawing.Point(523, 269);
+            this.btn_Them.Location = new System.Drawing.Point(523, 258);
             this.btn_Them.Name = "btn_Them";
-            this.btn_Them.Size = new System.Drawing.Size(114, 31);
+            this.btn_Them.Size = new System.Drawing.Size(123, 37);
             this.btn_Them.TabIndex = 18;
             this.btn_Them.Text = "THÊM KH";
             this.btn_Them.UseVisualStyleBackColor = true;
@@ -152,7 +153,7 @@
             // btn_Tim
             // 
             this.btn_Tim.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btn_Tim.Location = new System.Drawing.Point(825, 193);
+            this.btn_Tim.Location = new System.Drawing.Point(1051, 209);
             this.btn_Tim.Name = "btn_Tim";
             this.btn_Tim.Size = new System.Drawing.Size(101, 36);
             this.btn_Tim.TabIndex = 17;
@@ -164,17 +165,17 @@
             // 
             this.dt_NgaySinh.CustomFormat = "dd/MM/yyyy";
             this.dt_NgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dt_NgaySinh.Location = new System.Drawing.Point(685, 47);
+            this.dt_NgaySinh.Location = new System.Drawing.Point(824, 48);
             this.dt_NgaySinh.Name = "dt_NgaySinh";
-            this.dt_NgaySinh.Size = new System.Drawing.Size(200, 22);
+            this.dt_NgaySinh.Size = new System.Drawing.Size(200, 34);
             this.dt_NgaySinh.TabIndex = 14;
             // 
             // cb_LoaiKH
             // 
             this.cb_LoaiKH.FormattingEnabled = true;
-            this.cb_LoaiKH.Location = new System.Drawing.Point(224, 201);
+            this.cb_LoaiKH.Location = new System.Drawing.Point(292, 208);
             this.cb_LoaiKH.Name = "cb_LoaiKH";
-            this.cb_LoaiKH.Size = new System.Drawing.Size(121, 24);
+            this.cb_LoaiKH.Size = new System.Drawing.Size(232, 35);
             this.cb_LoaiKH.TabIndex = 13;
             // 
             // cb_GioiTinh
@@ -184,44 +185,44 @@
             "Nam",
             "Nữ",
             "Khác"});
-            this.cb_GioiTinh.Location = new System.Drawing.Point(224, 146);
+            this.cb_GioiTinh.Location = new System.Drawing.Point(292, 153);
             this.cb_GioiTinh.Name = "cb_GioiTinh";
-            this.cb_GioiTinh.Size = new System.Drawing.Size(121, 24);
+            this.cb_GioiTinh.Size = new System.Drawing.Size(232, 35);
             this.cb_GioiTinh.TabIndex = 12;
             // 
             // txt_DiaChi
             // 
-            this.txt_DiaChi.Location = new System.Drawing.Point(697, 145);
+            this.txt_DiaChi.Location = new System.Drawing.Point(824, 159);
             this.txt_DiaChi.Name = "txt_DiaChi";
-            this.txt_DiaChi.Size = new System.Drawing.Size(188, 22);
+            this.txt_DiaChi.Size = new System.Drawing.Size(200, 34);
             this.txt_DiaChi.TabIndex = 11;
             // 
             // txt_SoKH
             // 
-            this.txt_SoKH.Location = new System.Drawing.Point(727, 102);
+            this.txt_SoKH.Location = new System.Drawing.Point(824, 107);
             this.txt_SoKH.Name = "txt_SoKH";
-            this.txt_SoKH.Size = new System.Drawing.Size(158, 22);
+            this.txt_SoKH.Size = new System.Drawing.Size(200, 34);
             this.txt_SoKH.TabIndex = 10;
             // 
             // txt_TenKH
             // 
-            this.txt_TenKH.Location = new System.Drawing.Point(224, 102);
+            this.txt_TenKH.Location = new System.Drawing.Point(292, 101);
             this.txt_TenKH.Name = "txt_TenKH";
-            this.txt_TenKH.Size = new System.Drawing.Size(193, 22);
+            this.txt_TenKH.Size = new System.Drawing.Size(232, 34);
             this.txt_TenKH.TabIndex = 9;
             // 
             // txt_IDKH
             // 
-            this.txt_IDKH.Location = new System.Drawing.Point(224, 49);
+            this.txt_IDKH.Location = new System.Drawing.Point(292, 46);
             this.txt_IDKH.Name = "txt_IDKH";
-            this.txt_IDKH.Size = new System.Drawing.Size(193, 22);
+            this.txt_IDKH.Size = new System.Drawing.Size(232, 34);
             this.txt_IDKH.TabIndex = 8;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label9.Location = new System.Drawing.Point(535, 195);
+            this.label9.Location = new System.Drawing.Point(662, 217);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(75, 27);
             this.label9.TabIndex = 7;
@@ -231,7 +232,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label8.Location = new System.Drawing.Point(550, 140);
+            this.label8.Location = new System.Drawing.Point(662, 162);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(73, 27);
             this.label8.TabIndex = 6;
@@ -241,7 +242,7 @@
             // 
             this.lb_SoKH.AutoSize = true;
             this.lb_SoKH.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lb_SoKH.Location = new System.Drawing.Point(531, 91);
+            this.lb_SoKH.Location = new System.Drawing.Point(658, 110);
             this.lb_SoKH.Name = "lb_SoKH";
             this.lb_SoKH.Size = new System.Drawing.Size(144, 27);
             this.lb_SoKH.TabIndex = 5;
@@ -251,7 +252,7 @@
             // 
             this.lb_NgaySinh.AutoSize = true;
             this.lb_NgaySinh.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lb_NgaySinh.Location = new System.Drawing.Point(533, 52);
+            this.lb_NgaySinh.Location = new System.Drawing.Point(658, 55);
             this.lb_NgaySinh.Name = "lb_NgaySinh";
             this.lb_NgaySinh.Size = new System.Drawing.Size(104, 27);
             this.lb_NgaySinh.TabIndex = 4;
@@ -261,7 +262,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label5.Location = new System.Drawing.Point(26, 198);
+            this.label5.Location = new System.Drawing.Point(95, 211);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(157, 27);
             this.label5.TabIndex = 3;
@@ -271,7 +272,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label4.Location = new System.Drawing.Point(27, 140);
+            this.label4.Location = new System.Drawing.Point(95, 156);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(88, 27);
             this.label4.TabIndex = 2;
@@ -281,7 +282,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(27, 91);
+            this.label3.Location = new System.Drawing.Point(95, 104);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(156, 27);
             this.label3.TabIndex = 1;
@@ -291,7 +292,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label2.Location = new System.Drawing.Point(27, 47);
+            this.label2.Location = new System.Drawing.Point(95, 49);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(145, 27);
             this.label2.TabIndex = 0;
@@ -300,9 +301,10 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.data_DanhSachKH);
-            this.groupBox2.Location = new System.Drawing.Point(12, 329);
+            this.groupBox2.Font = new System.Drawing.Font("Segoe UI Variable Text Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.Location = new System.Drawing.Point(12, 343);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(1031, 208);
+            this.groupBox2.Size = new System.Drawing.Size(1192, 221);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Danh sách khách hàng ";
@@ -310,11 +312,11 @@
             // data_DanhSachKH
             // 
             this.data_DanhSachKH.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.data_DanhSachKH.Location = new System.Drawing.Point(6, 21);
+            this.data_DanhSachKH.Location = new System.Drawing.Point(6, 32);
             this.data_DanhSachKH.Name = "data_DanhSachKH";
             this.data_DanhSachKH.RowHeadersWidth = 51;
             this.data_DanhSachKH.RowTemplate.Height = 24;
-            this.data_DanhSachKH.Size = new System.Drawing.Size(1019, 173);
+            this.data_DanhSachKH.Size = new System.Drawing.Size(1180, 183);
             this.data_DanhSachKH.TabIndex = 0;
             this.data_DanhSachKH.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.data_DanhSachKH_CellClick);
             // 
@@ -322,12 +324,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1052, 535);
+            this.ClientSize = new System.Drawing.Size(1216, 576);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
             this.Name = "QuanLyKhachHang";
             this.Text = "QuanLyKhachHang";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.QuanLyKhachHang_FormClosed);
             this.Load += new System.EventHandler(this.QuanLyKhachHang_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
